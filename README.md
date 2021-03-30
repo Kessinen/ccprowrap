@@ -9,5 +9,5 @@ cd /opt
 sudo git clone git@github.com:Kessinen/ccprowrap.git
 sudo chown -R username ccprowrap
 cd ccprowrapper
-python ccprowrap.py
+python ccprowrap.py -h
 ```
