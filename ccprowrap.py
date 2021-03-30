@@ -23,7 +23,7 @@ def changeFanSpeed(fans, speed):
             run(cmd)
         except FileNotFoundError:
             print("liquidctl not found. Is it installed?")
-            exit(0)
+            exit(1)
 
 def listFans():
     #TODO Add logic
@@ -33,5 +33,9 @@ argparser = ArgumentParser(description="Spin that fan!\nHelper for liquidctl")
 argparser.add_argument("fanspeed",help="Set fan speed as percent (0-100)", type=int)
 
 args = argparser.parse_args()
-
+try:
+    run('liquidctl initialize all'.split(" "))
+except FileNotFoundError:
+    print("liquidctl not found. Is it installed?")
+    exit(1)
 changeFanSpeed(allFans, args.fanspeed)
