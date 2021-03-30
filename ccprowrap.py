@@ -31,7 +31,7 @@ def listFans():
     return None
 
 argparser = ArgumentParser(description="Spin that fan!\nHelper for liquidctl")
-argparser.add_argument("-f", "--fanspeed", metavar="int", help="Set fan speed as percent (0-100)", type=int, required=True)
+argparser.add_argument("-s", "--fanspeed", metavar="int", help="Set fan speed as percent (0-100)", type=int, required=True)
 argparser.add_argument("-v", "--verbose", action='store_true')
 
 args = argparser.parse_args()

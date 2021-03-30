@@ -14,5 +14,5 @@ python ccprowrap.py -h
 
 ## Usage
 ```
-python ccprowrap.py "fanspeed"
+python ccprowrap.py -s "fanspeed"
 ```
